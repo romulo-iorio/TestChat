@@ -1,6 +1,8 @@
+Add remote folder to github
+
 git init
 git add <folder1> <folder2> <etc.>
 git commit -m "Your message about the commit"
-git remote add origin https://github.com/yourUsername/yourRepository.git
+git remote add origin https://github.com/romulo-iorio/TestChat.git
 git push -u origin master
 git push origin master
