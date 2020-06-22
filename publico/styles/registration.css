@@ -1,0 +1,251 @@
+* {
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+body {
+    height: 97.5vh;
+    margin: 0;
+    padding: 0;
+}
+
+div.content {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer,
+header {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+input,
+select {
+    width: 182px;
+    height: 32px;
+    margin-bottom: 28px;
+    border-radius: 50px;
+    background-color: white;
+    border: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    padding-left: 5px;
+}
+
+input:focus,
+select:focus,
+button:focus {
+    outline: none;
+}
+
+input:hover,
+select:hover {
+    background-color: #FFFFF0;
+}
+
+button {
+    width: 70px;
+    height: 20px;
+    border-radius: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    text-decoration-color: white;
+    color: white;
+    background-color: #8C3718;
+    margin-bottom: 28px;
+}
+
+button:hover {
+    background-color: #8C3708;
+}
+
+footer p{
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+    color: white;
+    font-size: 12px;
+}
+
+img#background {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+
+img#driver {
+    height: 350px;
+    width: 190px;
+    position: fixed;
+    /* top: 292px;
+    left: 170px; */
+    bottom: 0px;
+    right: 0px;
+    z-index: -1;
+    opacity: 0.75;
+}
+
+div#logo-circle {
+    background-color: white;
+    width: 165px;
+    height: 165px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px auto 36px auto;
+}
+
+img#logo {
+    width: 127px;
+    height: 127px;
+}
+
+div#links {
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto 30px 87px;
+    padding: 0;
+}
+
+a {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+div#links a + a{
+    margin-top: 11px;
+}
+
+div#google-login {
+    width: 170;
+    height: 30px;
+    display: flex;
+    margin: 0 auto 90px auto;   
+    border-radius: 6px;
+    background-color: white; 
+    align-items: center;
+    justify-content: center;
+}
+
+div#google-login p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #929292;
+    margin: auto 8px;
+}
+
+div#google-login span {
+    display: flex;
+    height: 23px;
+    width: 23px;
+    background-image: url('../img/google.svg');
+    margin: auto 8px;
+}
+
+form input#image {
+    visibility: hidden;
+    display: none;
+}
+
+form label[for=image] {
+    background: #FFFFFF;
+    border: 0;
+    font-size: 16px;
+    /*outline: none;*/
+    border-radius: 12px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 32px;
+    width: 20%;
+    margin: auto auto 28px auto;
+    border-left: ridge;
+}
+
+form label[for = image] img {
+    height: 25px;
+    pointer-events: none;
+}
+
+#image-modal {
+    display: flex;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    transition: 400ms;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+#image-modal.hide,
+#concluido-modal.hide {
+    display: none;
+}
+
+#image-modal img#image-sample {
+    pointer-events: none;
+    border-radius: 30px;
+    transition: 400ms;
+    width: 200px;
+    height: auto;
+}
+
+div#name-image {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    width: 182px;
+}
+
+div#name-image input[type=text] {
+    width: 80%;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.input-error {
+    box-shadow: 0px 0px 0px 2px red;
+}
+
+p.error-message {
+    font-size: 16px;
+    color: red;
+    margin: -16px 0px 0 0;
+}
+
+.hidden {
+    display: none;
+}

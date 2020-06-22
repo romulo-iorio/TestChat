@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block styles %}
+        <link rel="stylesheet" type="text/css" href="../styles/chat.css" />    
+{% endblock styles %}
+
+{% set pageId = "page-chat" %}
+
+{% block content %}
+    <div class="content">
+        <section class="container row">
+            <div class="chat-item">
+                <img src="../uploads/image-1592150946673.jpeg" alt="img-truck">
+                <p id="message">Boa noite, vi um serviço de frete de Campinas para Fortaleza, gostaria de pedir mais informações</p>
+                <div id="message-time">
+                    <span>17:38</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="container row">
+            <div class="chat-item">
+                <img src="../img/LogoSVG.svg" alt="img-company">
+                <p id="message">Pronto, os detalhes do serviço são os seguintes: Preciso que você envie 30 toneladas de carga para Fortaleza até o fim de semana</p>
+                <div id="message-time">
+                    <span>17:40</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="container row">
+            <div class="chat-item">
+                <img src="../uploads/image-1592150946673.jpeg" alt="img-truck">
+                <p id="message">Ok, estarei chegando aí para buscar a carga em 30 minutos</p>
+                <div id="message-time">
+                    <span>17:38</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="container row">
+            <div class="chat-item">
+                <img src="../img/LogoSVG.svg" alt="img-company">
+                <p id="message">Combinado, prepararemos a sua carga para despacho!</p>
+                <div id="message-time">
+                    <span>17:40</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="message-input">
+        <form>
+            <input id="message-text" type="text" placeholder="Digite uma mensagem">
+        </form>
+        <button id="send" type="submit">></button>
+    </div>
+{% endblock content %}
+
+{% block script %}
+    <script src="../scripts/chat.js"></script>
+{% endblock script %}

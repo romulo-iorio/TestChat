@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% block styles %}
+    <link rel="stylesheet" type="text/css" href="../styles/registration.css" />    
+{% endblock styles %}
+
+{% set pageId = "page-register" %}
+
+{% block header %}
+    <header>
+        <div id="logo-circle">
+            <img src="../img/chat.svg" alt="" id="logo">
+        </div>
+    </header>
+{% endblock header %}
+
+{% block content %}
+    <div class="content">
+        <form action="/registration" method="POST" enctype="multipart/form-data">
+            <p id ="image-error" class="error-message hidden">Please choose an image</p>
+            <div id="name-image">
+                <input type="text" name="name" placeholder="Fill in your name" required>
+
+                <label for="image">
+                    <img src="../img/camera.svg" id="input-image-icon" />
+                    <input id="image" type="file" name="image" accept="image/*">
+                </label>                
+            </div>
+            {% if userError %}
+                <p class="error-message">Nickname already in use</p>
+            {% endif %}
+            <input type="text" name="nickname" placeholder="Fill in your nickname" required>
+            <select name="gender" required>
+                <option value="">Select your gender</option>
+                <option value="Man">Man</option>
+                <option value="Woman">Woman</option>
+                <option value="Other">Other</option>
+                <option value="I\'d rather not say">I'd rather not say</option>
+            </select>
+            {% if loginError %}
+                <p class="error-message">Email already in use</p>
+            {% endif %}
+            <input type="email" name="email" placeholder="Fill in your e-mail" required>
+            <input minlength="8" type="password" value="" name="password" placeholder="Fill in your password" required>
+            <p id ="password-error" class="error-message hidden">Passwords do not match</p>
+            <input minlength="8" type="password" value="" name="password-repeat" placeholder="Fill in the same password" required>
+            <input type="date" name="birthday" placeholder="Fill in your birthday" required>
+
+            <button type="button" id="send-form">Register</button>
+
+        </form>
+        
+    </div>
+
+    <div class="hide" id="image-modal">
+        <img id="image-sample" src="" alt="Imagem de perfil selecionada pelo usuário">
+    </div>
+{% endblock content %}
+
+{% block script %}
+    <script src="../scripts/registration.js"></script>
+
+    {% if userError %}
+        <script>
+            nickname = document.querySelector("input[name=nickname]");
+            nickname.classList.add("input-error");
+        </script>   
+    {% endif %}
+
+    {% if loginError %}
+        <script>
+            email = document.querySelector("input[name=email]");
+            email.classList.add("input-error");
+        </script>   
+    {% endif %}
+{% endblock script %}
+
+

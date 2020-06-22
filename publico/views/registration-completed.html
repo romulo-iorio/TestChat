@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block styles %}
+    <link rel="stylesheet" type="text/css" href="../styles/registration-completed.css" />    
+{% endblock styles %}
+
+{% set pageId = "page-login" %}
+
+{% block header %}
+    <header>
+        <div id="logo-circle">
+            <img src="../img/chat.svg" alt="" id="logo">
+        </div>
+    </header>
+{% endblock header %}
+
+{% block content %}
+    <div class="content">
+        <h1>Your registration was successfully completed!</h1>
+        <h3>Redirecting you to the log-in page...</h3>
+    </div>
+{% endblock content %}
+
+{% block script %}
+    <script src="../scripts/registration-completed.js"></script>
+{% endblock script %}

@@ -1,0 +1,24 @@
+{
+    "short_name": "testchat",
+    "name": "testchat: Testing chat",
+    "description": "App to test chat",
+    "icons": [
+        {
+            "src": "/img/chat192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/img/chat512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": "/",
+    "background_color": "#049dd9",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#049dd9",
+    "shortcuts": [
+    ]
+}

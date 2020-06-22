@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1">
+    <meta name="description" content="App for testing a chat functionality">
+    <meta name="theme-color" content="#FFFFFF">
+
+    {% block title %}
+        <title>TestChat</title>
+    {% endblock title %}
+
+    <link rel="shortcut icon" href="../img/chat.svg" />
+    <link rel="manifest" href="../../manifest.json">
+    <link rel="apple-touch-icon" href="../img/chat.svg"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    {% block styles %}
+
+    {% endblock styles %}
+</head>
+<body>
+    {% block header %}
+
+    {% endblock header %}
+
+
+    <div id="{{ pageId }}">
+
+        {% block content %}
+
+        {% endblock content %}
+
+        <footer>
+            <p>© 2020 Rômulo Iorio. All rights reserved</p>
+        </footer>
+    </div>
+
+    <img src="../img/background.png" alt="" id="background">
+
+    {% block imageModal %}
+            
+    {% endblock imageModal %}
+
+    {% block modal %}
+            
+    {% endblock modal %}
+
+    {% block script %}
+
+    {% endblock script %}
+    <script src="../service-worker.js"></script>
+    <script>
+        // CODELAB: Register service worker.
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then((reg) => {
+                    console.log('Service worker registered.', reg);
+                    }, function(err) {
+                        console.log('ServiceWorker registration failed: ', err);
+                    });
+            });
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,200 @@
+body {
+    background-color: #FFFFFF;
+    height: 97.5vh;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 160px;
+    width: 100vw;
+    background-color: #0471B5;
+}
+
+header div.header-content {
+    margin: 0 15px;
+    display: flex;
+    flex: 1;
+}
+
+header div#photo-circle {
+    height: 82px;
+    width: 82px;
+    border-radius: 100px;
+    background-color: #F2F2F2;
+}
+
+header div#photo-circle img#photo{
+    height: 82px;
+    width: 82px;
+    border-radius: 100px;
+}
+
+header div#header-info {
+    display: flex;
+    flex-direction: column;
+    margin: auto auto auto 8px;
+    align-content: center;
+}
+
+header div#header-info h1{
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    color:#FFFFFF;
+    font-size: 15px;
+    line-height: 18px;
+    margin-bottom: 3px;
+}
+
+header div#header-info h2{
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    color:#FFFFFF;
+    font-size: 10px;
+    line-height: 12px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    height: auto;
+}
+
+footer p{
+    font-family: 'Roboto', sans-serif;
+    color:#65DBF5;
+    font-size: 12px;
+    flex: 1;
+    margin: 0px auto;
+    text-align: center;
+    margin: 10px auto 0 auto;
+}
+
+div.content {
+    margin: 10px auto 10px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.chat-company img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, .8);
+}
+
+.box-mensage span {
+    font-size: 10px;
+    text-align: right;
+    float: right;
+}
+
+.chat-input {
+    position: absolute;
+    left: 0px;
+    bottom: 10px;
+    margin: auto;
+    width: 100%;
+}
+
+.box {
+    margin: 0 0 0 5%;
+    width: 80%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    border: solid 2px black;
+    border-radius: 10px;
+}
+
+.texto {
+    margin: 10px;
+    border: none;
+    width: 100%;
+}
+
+.enviar {
+    width: 40px;
+    height: 40px;
+    margin: 4px;
+    border-radius: 50%;
+    color: white;
+    right: 0px;
+    font-size: 16px;
+    border: black solid 1px;
+    background-color: #111;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    font-size: 14px;
+}
+
+.chat-item {
+    display: flex;
+    margin: 10px 5px;
+    align-content: center;
+    justify-content: center;
+}
+
+div.chat-item img {
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    margin: auto 10px auto 0;
+}
+
+div#message-time {
+    padding-top: 60px;
+}
+
+div.chat-item span{
+    font-family: 'Roboto', sans-serif;
+    color: #0471B5;
+    font-size: 14px;
+}
+
+#message-input {
+    display: flex;
+    margin: auto;
+    align-content: center;
+    justify-content: center;
+}
+
+#message-input input {
+    width: 270px;
+    height: 30px;
+    border-radius: 100px;
+    background-color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    color: #000000;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+#message-input input:focus {
+    outline: none;
+}
+
+button#send {
+    height: 35px;
+    width: 50px;
+    border-radius: 100px;
+    background-color: #0471B5;
+    align-self: center;
+    font-family: 'Roboto', sans-serif;
+    color: #FFFFFF;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

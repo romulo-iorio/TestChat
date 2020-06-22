@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block styles %}
+    <link rel="stylesheet" type="text/css" href="../styles/login.css" />    
+{% endblock styles %}
+
+{% set pageId = "page-login" %}
+
+{% block header %}
+    <header>
+        <div id="logo-circle">
+            <img src="../img/chat.svg" alt="Logo do FreteSeguro" id="logo">
+        </div>
+    </header>
+{% endblock header %}
+
+{% block content %}
+    <div class="content">
+        <form action="/login" method="POST" enctype="multipart/form-data">
+
+            {% if emailError %}
+                <p class="error-message">Email not found, please sign in</p>
+            {% endif %}
+            <p class="error-message hidden" id="email-error">Please fill in your e-mail</p>
+            <input type="email" name="email" placeholder="Fill in your e-mail" required>
+            
+            {% if passwordError %}
+                <p class="error-message">Password incorrect, please try again</p>
+            {% endif %}
+            <p class="error-message hidden" id="password-error">Please fill in your password</p>
+            <input type="password" value="" name="password" placeholder="Fill in your password" required>
+
+            <button id="send-form" type="button">Log-in</button>
+        </form>
+
+        <div id="links">
+            <a id="forgot-password">I forgot my password</a>
+            <a href="/registration" id="registration">I'm new here. Sign up!</a>
+        </div>
+
+        <div id="google-login">
+            <p>Log-in with google</p>
+            <span id="google-icon"></span>
+        </div>
+
+    </div>
+{% endblock content %}
+
+{% block script %}
+    <script src="../scripts/login.js"></script>
+    {% if emailError %}
+        <script>
+            emailInput = document.querySelector("input[name=email]");
+            emailInput.classList.add("input-error");
+        </script>   
+    {% endif %}
+
+    {% if passwordError %}
+        <script>
+            passwordInput = document.querySelector("input[name=password]");
+            passwordInput.classList.add("input-error");
+        </script>   
+    {% endif %}
+
+{% endblock script %}

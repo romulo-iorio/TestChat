@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block styles %}
+    <link rel="stylesheet" type="text/css" href="../styles/profile.css" />    
+{% endblock styles %}
+
+{% set pageId = "page-profile" %}
+
+{% block header %}
+    <header>
+        <div id="photo-circle">
+            <img src={{loggedUser.image}} alt="Logged user photo" id="photo">
+            <div id="change-photo-circle">
+                <img src="../img/cameraIcon.svg" alt="Ícone de câmera que permite mudar foto" id="change-photo">
+            </div>
+            <form action="/change-photo" method="POST" enctype="multipart/form-data" id = "changePhotoForm">
+                <input type="file" name=image hidden>
+            </form>
+        </div>
+    </header>
+{% endblock header %}
+
+{% block content %}
+    <div class="content">
+        <div id="name-div">
+            <label for="name">Name:</label>
+            <h1 name="name">{{ loggedUser.name }}</h1>
+        </div>
+        <div id="age-div">
+            <label for="age">Age:</label>
+            <h1 name="age">{{ loggedUser.birthday }}</h1>
+        </div>
+        <div id="gender-div">
+            <label for="gender">Gender:</label>
+            <h1 name="gender">{{ loggedUser.gender }}</h1>
+        </div>
+        <div id="email-div">
+            <label for="email">Email:</label>
+            <h1 name=email>{{ loggedUser.email }}</h1>
+        </div>
+    </div>
+{% endblock content %}
+
+{% block script %}
+    <script src="../scripts/profile.js"></script>
+{% endblock script %}
